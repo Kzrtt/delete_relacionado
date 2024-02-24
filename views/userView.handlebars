@@ -1,0 +1,12 @@
+    {{#with user}}
+        <div class="user-container">
+            <h1>{{name}}</h1>
+            <p> Profissão: {{occupation}}</p>
+            <div class="address-list" style="border-top: 1px solid #CCC">
+                <h2 style="margin-top: 20px; margin-bottom: 20px">Lista de Endereços: </h2>
+                {{#each Addresses}}
+                    <p>#{{this.id}} - {{this.street}}, {{this.number}} - {{this.city}}</p>
+                {{/each}}
+            </div>
+        </div>
+    {{/with}}
